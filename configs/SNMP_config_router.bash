@@ -1,4 +1,4 @@
-//SNMP v2c Configuration
+#SNMP v2c Configuration
 conf t
 snmp-server community public RO
 snmp-server host 192.168.100.10 version 2c public //VM interface address
@@ -7,7 +7,7 @@ access-list 10 permit 192.168.100.10
 end 
 write memory
 
-//SNMP v3 Configuration
+#SNMP v3 Configuration
 enable
 configure terminal
 snmp-server group AdminGroup v3 priv

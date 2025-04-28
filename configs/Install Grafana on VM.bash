@@ -7,7 +7,7 @@ GRANT ALL PRIVILEGES ON grafana.* TO 'grafana'@'%';
 quit;
 
 
-//Configure Grafana APT repository
+#Configure Grafana APT repository
 mkdir /downloads/grafana -p
 cd /downloads/grafana
 wget https://packages.grafana.com/gpg.key
@@ -23,10 +23,10 @@ add-apt-repository 'deb [arch=amd64,i386] https://packages.grafana.com/oss/deb
 stable main'
 apt-get update
 
-//install Grafana
+#install Grafana
 apt-get install grafana
 
-//Edit config file
+#Edit config file
 nano /etc/grafana/grafana.ini
 
 [database]
@@ -43,5 +43,5 @@ service grafana-server start
 systemctl enable --now grafana-server
 systemctl status grafana-server
 
-//Copy this url in the browser
+#Copy this url in the browser
 http://localhost:3000
