@@ -5,6 +5,7 @@ apt-get install snmp snmp-mibs-downloader
 nano /etc/snmp/snmp.conf
 
 #Install telegraf
+sudo su
 mkdir /downloads
 cd /downloads
 wget https://dl.influxdata.com/telegraf/releases/telegraf_1.12.1-1_amd64.deb
@@ -20,3 +21,6 @@ nano/etc/telegraf/telegraf.conf
 #Check Installation
 systemctl enable --now telegraf
 systemctl status telegraf
+
+#Edit Config file
+sudo nano/etc/telegraf/telegraf.conf
