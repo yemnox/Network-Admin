@@ -4,6 +4,7 @@ sudo apt install ansible
 ansible --version
 mkdir ~/ansible && cd ~/ansible
 
+cd ~/ansible
 nano inventory
     #Write This Code
 [local]
