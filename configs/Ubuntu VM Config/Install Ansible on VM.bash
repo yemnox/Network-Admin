@@ -26,3 +26,5 @@ nano copy_file.yml
 
 
 ansible-playbook -i inventory copy_file.yml
+ansible all -i inventory -m ping
+ansible-playbook -i inventory configure_routers.yml
